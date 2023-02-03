@@ -6,19 +6,12 @@ namespace Yii\Materialize\Asset\Tests\Support;
 
 use Exception;
 use Psr\Log\NullLogger;
-use RuntimeException;
 use Yii\Support\Assert;
 use Yiisoft\Aliases\Aliases;
 use Yiisoft\Assets\AssetConverter;
 use Yiisoft\Assets\AssetLoader;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Assets\AssetPublisher;
-use Yiisoft\Files\FileHelper;
-
-use function closedir;
-use function is_dir;
-use function opendir;
-use function readdir;
 
 trait TestTrait
 {
