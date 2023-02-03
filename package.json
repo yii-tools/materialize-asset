@@ -1,0 +1,8 @@
+{
+    "name": "materialize-asset",
+    "version": "1.0.0",
+    "dependencies": {
+        "materialize-css": "^1.0.0"
+    },
+    "license": "mit"
+}
