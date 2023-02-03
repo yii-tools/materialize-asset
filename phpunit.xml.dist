@@ -23,7 +23,7 @@
   </coverage>
 
   <testsuites>
-    <testsuite name="Template">
+    <testsuite name="Materialize-Asset">
       <directory>./tests</directory>
     </testsuite>
   </testsuites>
