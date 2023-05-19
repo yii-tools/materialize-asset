@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Yii\Materialize\Asset\Tests\Provider;
+namespace Yii\Assets\Tests\Provider;
 
-use Yii\Materialize\Asset\Npm;
+use Yii\Assets;
 
 final class NpmAssetProvider
 {
@@ -14,22 +14,10 @@ final class NpmAssetProvider
     public static function assetBundles(): array
     {
         return [
-            [
-                'Css',
-                Npm\Dev\MaterializeAsset::class,
-            ],
-            [
-                'Css',
-                Npm\Min\MaterializeAsset::class,
-            ],
-            [
-                'Js',
-                Npm\Dev\MaterializeAsset::class,
-            ],
-            [
-                'Js',
-                Npm\Min\MaterializeAsset::class,
-            ],
+            ['Css', Assets\MaterializeDev::class],
+            ['Css', Assets\MaterializeProd::class],
+            ['Js', Assets\MaterializeDev::class],
+            ['Js', Assets\MaterializeProd::class],
         ];
     }
 }

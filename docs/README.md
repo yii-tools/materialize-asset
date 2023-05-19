@@ -1,4 +1,4 @@
-## Using assets
+# Using assets
 
 Assets are files that are not processed by Webpack. They are copied directly to the output folder. This includes images, fonts, and any other files that you want to use in your project.
 
@@ -13,14 +13,14 @@ file: ./resources/views/layout/main.php
 
 declare(strict_types=1);
 
-use Yii\Materialize\Asset\Npm\Dev\MaterializeAsset;
+use Yii\Assets\MaterializeDev;
 
 /**
  * @var \Yiisoft\Assets\AssetManager $assetManager
  */
 
 // Register the asset bundle with a asset manager component.
-$assetManager->register(MaterializeAsset::class);
+$assetManager->register(MaterializeDev::class);
 
 // Set parameters for the registered asset bundle a view component.
 $this->addCssFiles($assetManager->getCssFiles());
@@ -39,13 +39,13 @@ file: ./config/params.php
 
 declare(strict_types=1);
 
-use Yii\Tailwind\Asset\Cdn\MaterializeAsset;
+use Yii\Assets\MaterializeProd;
 
 return [
     'yiisoft/assets' => [
         'assetManager' => [
             'register' => [
-                MaterializeAsset::class,
+                MaterializeProd::class,
             ],
         ],
     ],
@@ -54,4 +54,5 @@ return [
 
 ## Using npm packages
 
-[npm](https://www.npmjs.com/) packages are installed via [fxpio/foxy](https://github.com/fxpio/foxy) and are available in the `node_modules` directory. 
+You can install [npm](https://www.npmjs.com/) packages [fxpio/foxy](https://github.com/fxpio/foxy),
+and they will be available in the `node_modules` directory.
