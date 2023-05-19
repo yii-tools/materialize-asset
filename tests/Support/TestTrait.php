@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Yii\Materialize\Asset\Tests\Support;
+namespace Yii\Assets\Tests\Support;
 
 use Exception;
 use Psr\Log\NullLogger;

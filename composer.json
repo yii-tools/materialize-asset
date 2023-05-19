@@ -18,25 +18,21 @@
         "yiisoft/files": "^2.0"
     },
     "require-dev": {
+        "infection/infection": "^0.27",
         "maglnet/composer-require-checker": "^4.3",
-        "phpunit/phpunit": "^10.0",
-        "roave/infection-static-analysis-plugin": "^1.29",
-        "vimeo/psalm": "^5.6",
+        "phpunit/phpunit": "^10.1",
+        "roave/infection-static-analysis-plugin": "^1.31",
+        "vimeo/psalm": "^5.8",
         "yii-tools/support": "^1.0@dev"
     },
     "autoload": {
         "psr-4": {
-            "Yii\\Materialize\\Asset\\": "src"
+            "Yii\\Assets\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Yii\\Materialize\\Asset\\Tests\\": "tests"
-        }
-    },
-    "extra": {
-        "branch-alias": {
-            "dev-main": "1.0.x-dev"
+            "Yii\\Assets\\Tests\\": "tests"
         }
     },
     "config": {

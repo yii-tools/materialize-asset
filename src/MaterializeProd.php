@@ -2,18 +2,18 @@
 
 declare(strict_types=1);
 
-namespace Yii\Materialize\Asset\Npm\Dev;
+namespace Yii\Assets;
 
 use Yiisoft\Assets\AssetBundle;
 use Yiisoft\Files\PathMatcher\PathMatcher;
 
-final class MaterializeAsset extends AssetBundle
+final class MaterializeProd extends AssetBundle
 {
     public string|null $basePath = '@assets';
     public string|null $baseUrl = '@assetsUrl';
-    public string|null $sourcePath = '@npm/materialize-css';
-    public array $css = ['dist/css/materialize.css'];
-    public array $js = ['dist/js/materialize.js'];
+    public string|null $sourcePath = '@npm/@materializecss/materialize';
+    public array $css = ['dist/css/materialize.min.css'];
+    public array $js = ['dist/js/materialize.min.js'];
 
     public function __construct()
     {
@@ -21,8 +21,8 @@ final class MaterializeAsset extends AssetBundle
 
         $this->publishOptions = [
             'filter' => $pathMatcher->only(
-                '**dist/css/materialize.css',
-                '**dist/js/materialize.js',
+                '**css/materialize.min.css',
+                '**js/materialize.min.js',
             ),
         ];
     }
